@@ -1,0 +1,28 @@
+@import "../../../styles/mixin";
+
+.contact {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  background: linear-gradient(89deg, #a2cbfc30 0%, #c5daf4 100%);
+  @include breakpoint("down", "md") {
+    flex-direction: column;
+    border-radius: 12px;
+  }
+  .contact_map {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+}
