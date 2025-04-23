@@ -1,12 +1,12 @@
 import React from 'react'
 import ContactAddress from './ContactAddress/ContactAddress'
 import ContactForm from './ContactForm/ContactForm'
-import styles from './ContactUs.module.scss';
+import styles from './Contact.module.scss';
 import ServiceMapBox from '../../components/maps/MapBox/ServiceMapBox';
 import { CONTACT_LOCATIONS } from '../../../data/DUMMY_DATA';
 import SectionWrapper from '../../components/SectionWrapper/SectionWrapper';
 
-const ContactUs = () => {
+const Contact = () => {
   return (
     <SectionWrapper>
       <div className={styles.contact}>
@@ -22,4 +22,4 @@ const ContactUs = () => {
   )
 }
 
-export default ContactUs
+export default Contact
