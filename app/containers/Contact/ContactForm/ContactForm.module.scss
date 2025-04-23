@@ -1,5 +1,5 @@
-@import '../../../../styles/mixin';
-@import '../../../../styles/variables';
+@import "../../../../styles/mixin";
+@import "../../../../styles/variables";
 
 .form {
   background: linear-gradient(270deg, rgba(211, 227, 246, 0) 0%, #e5edf7 100%);
@@ -29,16 +29,20 @@
     }
     @include breakpoint("up", "xl") {
       margin-bottom: 48px;
-      font-size: 52px;
+      font-size: 48px;
     }
   }
   .formRow {
     display: flex;
     gap: 24px;
+    @include breakpoint("down", "md") {
+      flex-direction: column;
+      gap: 0;
+    }
   }
 
   .btn {
-    color: #1E1E1E;
+    color: #1e1e1e;
     background: white;
     font-family: "Lexend Deca";
     font-size: 18px;

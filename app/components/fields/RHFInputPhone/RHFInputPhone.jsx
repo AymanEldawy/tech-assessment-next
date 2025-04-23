@@ -49,8 +49,8 @@ const RHFInputPhone = ({ name = 'phone', inputPhoneProps }) => {
             onChange={onChange}
             onCountryChange={setCountry}
             className={styles.input_phone}
-            inputComponent={InputComponent}
-            countrySelectComponent={CountrySelectComponent}
+            // inputComponent={InputComponent}
+            // countrySelectComponent={CountrySelectComponent}
             placeholder="Phone"
             {...inputPhoneProps}
           />
