@@ -1,0 +1,41 @@
+@mixin breakpoint($direction: 'up', $size: 'md') {
+  $breakpoint-values: (
+    'xs': 0,
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+    'xxl': 1400px
+  );
+
+  $value: map-get($breakpoint-values, $size);
+
+  @if $direction == 'up' {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else if $direction == 'down' {
+    @media (max-width: #{$value - 0.02px}) {
+      @content;
+    }
+  } @else if $direction == 'only' {
+    $next-size: map-get($breakpoint-values, next-breakpoint($size));
+    
+    @if $next-size {
+      @media (min-width: $value) and (max-width: #{$next-size - 0.02px}) {
+        @content;
+      }
+    } @else {
+      @media (min-width: $value) {
+        @content;
+      }
+    }
+  }
+}
+
+// Helper function for 'only' direction
+@function next-breakpoint($size) {
+  $breakpoint-list: map-keys($breakpoint-values);
+  $n: index($breakpoint-list, $size);
+  @return if($n < length($breakpoint-list), nth($breakpoint-list, $n + 1), null);
+}
