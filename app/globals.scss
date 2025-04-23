@@ -121,3 +121,15 @@ a {
     box-shadow: 0 0 2px #f44336;
   }
 }
+
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+/* For IE10 */
+select::-ms-expand {
+  display: none;
+}
