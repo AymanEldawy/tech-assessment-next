@@ -55,7 +55,8 @@
     border: none;
     text-transform: capitalize;
     transition: all 0.2s ease-in-out;
-    width: 100%;
+    // width: 100%;
+    width: fit-content;
     &:disabled {
       opacity: 0.7;
     }
