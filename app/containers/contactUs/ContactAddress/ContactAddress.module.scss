@@ -1,0 +1,83 @@
+@import "../../../../styles/mixin";
+@import "../../../../styles/variables";
+
+.address {
+  background-blend-mode: luminosity;
+  position: relative;
+
+  @include breakpoint("down", "md") {
+    width: 100%;
+    order: 2;
+  }
+  .address_content {
+    @include breakpoint("down", "md") {
+      gap: 20px;
+      display: grid;
+      grid-template-columns: 1fr !important;
+    }
+  }
+  .address_card {
+    font-family: Verdana;
+    overflow: hidden;
+    @include breakpoint("down", "md") {
+      max-width: unset;
+      border-radius: 1rem;
+    }
+    p,
+    .address_card_title {
+      width: fit-content;
+      background: white;
+      color: white;
+      padding: 12px 20px;
+      line-height: 1.4;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      min-width: 170px;
+      @include breakpoint("down", "md") {
+        width: 100% !important;
+        max-width: 100%;
+        border-radius: 0 !important;
+      }
+    }
+
+    .address_card_title {
+      color: black;
+      font-family: "Lexend Deca";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%;
+      letter-spacing: 2.38px;
+      text-transform: uppercase;
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      color: $gray700;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: 0.36px;
+      width: fit-content;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      min-width: 200px;
+    }
+    &:first-of-type {
+      .address_card_title {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      p {
+        @include breakpoint("up", "md") {
+          white-space: nowrap;
+        }
+      }
+    }
+    &:last-of-type {
+      p {
+        border-bottom-left-radius: 10px;
+      }
+    }
+  }
+}
