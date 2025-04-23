@@ -2,9 +2,9 @@ import React from 'react'
 import ContactAddress from './ContactAddress/ContactAddress'
 import ContactForm from './ContactForm/ContactForm'
 import styles from './ContactUs.module.scss';
-import ServiceMapBox from '../../components/shared/map/MapBox/ServiceMapBox';
+import ServiceMapBox from '../../components/maps/MapBox/ServiceMapBox';
 import { CONTACT_LOCATIONS } from '../../../data/DUMMY_DATA';
-import SectionWrapper from '../../components/shared/SectionWrapper/SectionWrapper';
+import SectionWrapper from '../../components/SectionWrapper/SectionWrapper';
 
 const ContactUs = () => {
   return (

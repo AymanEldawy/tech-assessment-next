@@ -1,5 +1,5 @@
-import ContactUs from "./containers/contactUs/ContactUs";
-import OurServiceArea from "./containers/serviceArea/OurServiceArea";
+import ContactUs from "./containers/ContactUs/ContactUs";
+import OurServiceArea from "./containers/OurServiceArea/OurServiceArea";
 
 export default function Home() {
   return (

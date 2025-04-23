@@ -1,6 +1,6 @@
 import { SERVICES_LOCATIONS } from "../../../data/DUMMY_DATA";
-import ServiceMapBox from "../../components/shared/map/MapBox/ServiceMapBox"
-import SectionWrapper from "../../components/shared/SectionWrapper/SectionWrapper";
+import ServiceMapBox from "../../components/maps/MapBox/ServiceMapBox"
+import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import styles from './OurServiceArea.module.scss';
 
 const OurServiceArea = () => {

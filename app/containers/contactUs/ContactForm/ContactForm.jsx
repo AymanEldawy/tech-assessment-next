@@ -1,9 +1,9 @@
 'use client';
 
 import { FormProvider, useForm } from 'react-hook-form';
-import RHFInput from '../../../components/shared/forms/RHFInput/RHFInput';
-import RHFInputPhone from '../../../components/shared/forms/RHFInputPhone/RHFInputPhone';
-import RHFTextarea from '../../../components/shared/forms/RHFTextarea/RHFTextarea';
+import RHFInput from '../../../components/fields/RHFInput/RHFInput';
+import RHFInputPhone from '../../../components/fields/RHFInputPhone/RHFInputPhone';
+import RHFTextarea from '../../../components/fields/RHFTextarea/RHFTextarea';
 import styles from './ContactForm.module.scss';
 
 const ContactForm = () => {
