@@ -31,6 +31,9 @@
       margin-bottom: 48px;
       font-size: 48px;
     }
+    @include breakpoint("down", "md") {
+      text-align: center;
+    }
   }
   .formRow {
     display: flex;
@@ -55,7 +58,6 @@
     border: none;
     text-transform: capitalize;
     transition: all 0.2s ease-in-out;
-    // width: 100%;
     width: fit-content;
     &:disabled {
       opacity: 0.7;
@@ -64,6 +66,11 @@
     &:active {
       background: #6aa3eb;
       color: #fff;
+    }
+    @include breakpoint("down", "md") {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 }
